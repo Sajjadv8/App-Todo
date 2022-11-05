@@ -1,17 +1,17 @@
 <h1 mat-dialog-title>submit Information</h1>
 <div mat-dialog-content>
-    <form>
+    <form [formGroup]=" productForm">
         <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
-            <input matInput placeholder="Name">
+            <input formControlName="productName" matInput placeholder="Name">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com">
+            <input formControlName="Email" type="email" matInput placeholder="Ex. pat@example.com">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Gender</mat-label>
-            <mat-select placeholder="Gender">
+            <mat-select formControlName="Gender" placeholder="Gender">
                 <mat-option value="Male">Male</mat-option>
                 <mat-option value="Female">Female</mat-option>
             </mat-select>
@@ -19,9 +19,15 @@
         <mat-label for="">
             <h2>Status</h2>
         </mat-label>
-        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+        <mat-radio-group formControlName="statusbar" aria-labelledby="example-radio-group-label"
+            class="example-radio-group">
             <mat-radio-button class="example-radio-button" *ngFor="let status of statusbar" [value]="status">
                 {{status}}
             </mat-radio-button>
         </mat-radio-group>
     </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left:5px;" mat-raised-button color="primary" (click)="Addproduct()">Save</button>
+</div>
