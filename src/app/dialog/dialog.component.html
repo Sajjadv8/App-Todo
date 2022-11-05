@@ -16,15 +16,12 @@
                 <mat-option value="Female">Female</mat-option>
             </mat-select>
         </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>
-                Status
-            </mat-label>
-            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                <mat-radio-button class="example-radio-button" *ngFor="let status of statusbar" [value]="status">
-                    {{status}}
-                </mat-radio-button>
-            </mat-radio-group>
-
-        </mat-form-field>
+        <mat-label for="">
+            <h2>Status</h2>
+        </mat-label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let status of statusbar" [value]="status">
+                {{status}}
+            </mat-radio-button>
+        </mat-radio-group>
     </form>
