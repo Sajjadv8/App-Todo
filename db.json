@@ -1,6 +1,26 @@
 {
   "productList": [
- 
+    {
+      "productName": "scs",
+      "Email": "radsjad9@gmail.com",
+      "Gender": "Male",
+      "statusbar": "inactive",
+      "id": 1
+    },
+    {
+      "productName": "nina",
+      "Email": "scnjdsndsjad9@gmail.com",
+      "Gender": "Female",
+      "statusbar": "active",
+      "id": 2
+    },
+    {
+      "productName": "ebi",
+      "Email": "ebisndsjad9@gmail.com",
+      "Gender": "Male",
+      "statusbar": "active",
+      "id": 3
+    }
   ],
   "comments": [
     {
