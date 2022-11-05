@@ -1,1 +1,30 @@
-<p>dialog works!</p>
+<h1 mat-dialog-title>submit Information</h1>
+<div mat-dialog-content>
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Ex. pat@example.com">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select placeholder="Gender">
+                <mat-option value="Male">Male</mat-option>
+                <mat-option value="Female">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>
+                Status
+            </mat-label>
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                <mat-radio-button class="example-radio-button" *ngFor="let status of statusbar" [value]="status">
+                    {{status}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+        </mat-form-field>
+    </form>
