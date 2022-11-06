@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
   }
   editproduct(row: any) {
     this.dialog.open(DialogComponent, {
-      width: '30%',
+      
       data: row
     }).afterClosed().subscribe(val => {
       if (val === 'update') {
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
       }
     })
   }
-  deleteProduct(id: number) {
+  deleteProduct(id : number) {
     this.api.deleteProduct(id)
       .subscribe({
         next: (res) => {

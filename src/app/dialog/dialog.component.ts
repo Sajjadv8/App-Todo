@@ -49,21 +49,21 @@ export class DialogComponent implements OnInit {
             }
           })
       }
-    }else {
+    } else {
       this.updateProduct()
     }
   }
-updateProduct(){
-this.api.putProduct(this.productForm.value,this.editData.id)
-.subscribe ({
-  next:(res)=>{
-    alert("suceess update");
-    this.productForm.reset();
-    this.dialogRef.close('update');
-  },
-  error:()=>{
-    alert('Error update');
+  updateProduct() {
+    this.api.putProduct(this.productForm.value, this.editData.id)
+      .subscribe({
+        next: (res) => {
+          alert("suceess update");
+          this.productForm.reset();
+          this.dialogRef.close('update');
+        },
+        error: () => {
+          alert('Error update');
+        }
+      })
   }
-})
-}
 }
