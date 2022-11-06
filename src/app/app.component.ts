@@ -55,16 +55,17 @@ export class AppComponent implements OnInit {
       }
     })
   }
-  deleteProduct(id:number){
-this.api.deleteProduct(id)
-.subscribe({next:(res)=>{
-  alert("suceess deleted");
-  this.getAllproduct();
-},
-error:()=>{
-  alert("error delete");
-}
-})
+  deleteProduct(id: number) {
+    this.api.deleteProduct(id)
+      .subscribe({
+        next: (res) => {
+          alert("suceess deleted");
+          this.getAllproduct();
+        },
+        error: () => {
+          alert("error delete");
+        }
+      })
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
